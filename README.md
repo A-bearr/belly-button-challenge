@@ -1,5 +1,5 @@
 # Belly Button Biodiversity Challenge
-Mod 14 challenge 
+Module 14 challenge 
 
 This project visualizes the bacterial data of different test subjects' belly buttons. The dashboard includes interactive charts displaying OTUs (Operational Taxonomic Units) and metadata for each test subject.
 
@@ -13,9 +13,16 @@ This project visualizes the bacterial data of different test subjects' belly but
 ## Deployment
 
 Deployed on GitHub Pages. You can access the dashboard here: 
+ https://a-bearr.github.io/belly-button-challenge/
+ 
 
 ## Installation
 
 Clone the repository:
 ```bash
-git clone https://github.com/your-username/belly-button-challenge.git
+git clone https://github.com/A-bearr/belly-button-challenge.git
+
+## References
+Hulcr, J. et al. (2012) A Jungle in There: Bacteria in Belly Buttons are Highly Diverse, but Predictable. Retrieved from: http://robdunnlab.com/projects/belly-button-biodiversity/results-and-data/ Links to an external site.
+
+Any code I did not generate myself was from the Xpert learning assistant within this designated course and modified by myself to create an applicable and working code. Xpert learning assistant is this course's AI tool.

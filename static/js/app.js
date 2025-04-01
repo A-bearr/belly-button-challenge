@@ -24,18 +24,37 @@ function buildCharts(sample) {
   d3.json("https://static.bc-edx.com/data/dl-1-2/m14/lms/starter/samples.json").then((data) => {
 
     // Get the samples field
-
+    const samples = data.samples;
 
     // Filter the samples for the object with the desired sample number
-
+    const result = samples.filter(sampleObj => sampleObj.id == sample)[0];
 
     // Get the otu_ids, otu_labels, and sample_values
-
+    const otu_ids = result.otu_ids;
+    const otu_labels = result.otu_labels;
+    const sample_values = result.sample_values;
 
     // Build a Bubble Chart
-
+    const bubbleData = [{
+      x: otu_ids,
+      y: sample_values,
+      text: otu_labels,
+      mode: 'markers',
+      marker: {
+        size: sample_values,
+        color: otu_ids,
+        colorscale: "YlGnBu"
+      }
+    }];
 
     // Render the Bubble Chart
+    const bubbleLayout = {
+      title: "OTU Bubble Chart",
+      xaxis: { title: "OTU ID" },
+      hovermode: "closest",
+    };
+    
+    Plotly.newPlot("bubble", bubbleData, bubbleLayout);
 
 
     // For the Bar Chart, map the otu_ids to a list of strings for your yticks
